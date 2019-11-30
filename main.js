@@ -1,13 +1,7 @@
 'use strict';
 
 function getDogImages(numberInput) {
-    if(numberInput < 3) {
-        fetch('https://dog.ceo/api/breeds/image/random/3')
-            .then(response => response.json())
-            .then(responseJson => displayResults(responseJson))
-            .catch(error => alert('Oops something went wrong. Try again later!'));
-    }
-    else if (numberInput > 50) {
+    if(numberInput > 50) {
         return alert('Please choose a number that is equal to or less than 50');
     }
     else {
@@ -43,15 +37,11 @@ $(function() {
 
 
 /*
-fetch('https://dog.ceo/api/breeds/image/random/3')
-  .then(rawResponse => rawResponse.json())
-  .then(jsonResponse => {
-    console.log(jsonResponse);
-    const images = jsonResponse.message.map(image => `<img src="${image}" />`);
-    $('.images').html(images);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+function getDogImage() {
+    fetch('https://dog.ceo/api/breeds/image/random/3)
+        .then(response => response.json())
+        .then(responseJson => displayResults(responseJson))
+        .catch(error => alert('I cant seem to find that. Try something else!'));
+}
   
 */
